@@ -11,6 +11,14 @@
   flex-grow: 1;
 }
 
+.flex__justify__center {
+  justify-content: center;
+}
+
+.flex__justify__evenly {
+  justify-content: space-evenly;
+}
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);

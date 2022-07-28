@@ -89,6 +89,14 @@ select {
   flex-grow: 1;
 }
 
+.flex__justify__center {
+  justify-content: center;
+}
+
+.flex__justify__evenly {
+  justify-content: space-evenly;
+}
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
@@ -224,9 +232,10 @@ select {
 }
 
 .large-button {
+  position: relative;
   background-color: white;
-  width: 200px;
-  height: 200px;
+  width: 274px;
+  height: 274px;
   padding: 4rem;
   display: block;
   border-radius: 100%;
@@ -234,6 +243,71 @@ select {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+.large-button::after {
+  content: "";
+  background: hsl(var(--clr-white)/0.15);
+  width: 274px;
+  height: 274px;
+  padding: 4rem;
+  display: block;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all ease 1.3s;
+  position: absolute;
+  z-index: -1;
+}
+.large-button:hover::after, .large-button:focus::after {
+  transform: scale(1.5);
+}
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.primary-navigation span {
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.underline-indicators > * {
+  position: relative;
+}
+
+.underline-indicators > *:hover::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+  background: hsl(var(--clr-white)/0.5);
+}
+
+.underline-indicators .active::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+  background: hsl(var(--clr-white));
+}
+
+.tab > * {
+  background-color: transparent;
+  border: 0;
+}
+
+.tab .active {
+  color: hsl(var(--clr-white));
 }
 
 /*# sourceMappingURL=style.css.map */

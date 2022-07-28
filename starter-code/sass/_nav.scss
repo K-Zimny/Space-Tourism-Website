@@ -1,0 +1,57 @@
+//site primary navigation
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  span {
+    margin-right: 0.5em;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+//indicators for nav/lists that have an underline
+
+.underline-indicators > * {
+  position: relative;
+}
+
+.underline-indicators > *:hover::after {
+  content: "";
+  position: absolute;
+
+  height: 3px;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+
+  background: hsl(var(--clr-white) / 0.5);
+}
+
+.underline-indicators .active::after {
+  content: "";
+  position: absolute;
+
+  height: 3px;
+  bottom: -1em;
+  left: 0;
+  right: 0;
+
+  background: hsl(var(--clr-white));
+}
+
+//tab element styles
+
+.tab > * {
+  background-color: transparent;
+  border: 0;
+}
+
+.tab .active {
+  color: hsl(var(--clr-white));
+}

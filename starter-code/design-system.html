@@ -148,21 +148,73 @@
       </section>
 
       <section class="flow" id="interactive-elements">
-        <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
+        <h2 class="numbered-list"><span>03</span> Interactive elements</h2>
 
         <!-- navigation -->
-        <div></div>
+        <div>
+          <nav>
+            <ul
+              class="primary-navigation underline-indicators flex flex__justify__center"
+              style="--gap: 4rem"
+            >
+              <li class="active">
+                <a
+                  class="fs-300 uppercase ff-sans-cond letter-spacing-2 text-white"
+                  href="#"
+                  ><span>01</span>Active</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fs-300 uppercase ff-sans-cond letter-spacing-2 text-white"
+                  href="#"
+                  ><span>02</span>Hovered</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fs-300 uppercase ff-sans-cond letter-spacing-2 text-white"
+                  href="#"
+                  ><span>03</span>Idle</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-        <div class="flex">
+        <div class="flex flex__justify__evenly" style="margin-top: 5rem">
           <div>
             <!-- explore button -->
-            <a href="#" class="large-button | uppercase ff-serif text-dark"
+            <a
+              href="#"
+              class="large-button | uppercase fs-600 ff-serif text-dark"
               >Explore</a
             >
           </div>
 
           <div style="margin-bottom: 50vh">
             <!-- Tabs -->
+
+            <div class="underline-indicators | tab">
+              <button
+                aria-selected="true"
+                class="active | fs-300 uppercase ff-sans-cond letter-spacing-2 text-light"
+              >
+                Moon
+              </button>
+              <button
+                aria-selected="false"
+                class="fs-300 uppercase ff-sans-cond letter-spacing-2 text-light"
+              >
+                Mars
+              </button>
+              <button
+                aria-selected="false"
+                class="fs-300 uppercase ff-sans-cond letter-spacing-2 text-light"
+              >
+                Europa
+              </button>
+            </div>
 
             <!-- Dots -->
 

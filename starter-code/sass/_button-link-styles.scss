@@ -1,7 +1,8 @@
 .large-button {
+  position: relative;
   background-color: white;
-  width: 200px;
-  height: 200px;
+  width: 274px;
+  height: 274px;
   padding: 4rem;
   display: block;
   border-radius: 100%;
@@ -9,4 +10,30 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  // transition: all ease 1.3s;
+
+  &::after {
+    content: "";
+    background: hsl(var(--clr-white) / 0.15);
+    width: 274px;
+    height: 274px;
+    padding: 4rem;
+    display: block;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all ease 1.3s;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    // width: 450px;
+    // height: 450px;
+    transform: scale(1.5); //width anh height cause repaints and are expensive.
+    //Transform is a better choice, also gpu accelerated.
+  }
 }
